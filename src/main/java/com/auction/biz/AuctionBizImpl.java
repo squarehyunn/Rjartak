@@ -227,5 +227,10 @@ public class AuctionBizImpl implements AuctionBiz {
 		return auctiondao.deleteAuction(auction_no);
 	}
 
+	@Override
+	public int deleteInterestBiz(int auction_no) {
+		return auctiondao.deleteInterest(auction_no);
+	}
+
 
 }

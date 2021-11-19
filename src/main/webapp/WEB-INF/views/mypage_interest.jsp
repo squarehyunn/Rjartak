@@ -26,6 +26,19 @@
 <title>알잘딱 - 화상 채팅 경매 서비스</title>
 <link rel="icon" type="image/png" sizes="32x32" href="resources/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicon-16x16.png">
+<style type="text/css">
+button{ 
+border-top-left-radius: 5px; 
+border-bottom-left-radius: 5px; 
+margin-right:-4px; 
+border: 1px solid skyblue; 
+background-color: rgba(0,0,0,0); 
+color: skyblue; padding: 5px; 
+} 
+
+
+
+</style>
 </head>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/mypage/mypage_interest.css">
 <body>
@@ -33,7 +46,7 @@
     <nav></nav>
     
     <section>
-        <h1 style="margin-left: 5px;">구매등급</h1>
+        <h1 style="margin-left: 5px;">관심상품</h1>
         
   <div id="navi" >
             <div id="navi_text">
@@ -54,10 +67,9 @@
         
         
             </div>    
-            <<!-- main (content)영역 -->
-  <div class="main">
-
-    <div class="content-product">
+            <!-- main (content)영역 -->
+<!--   <div class="main"> -->
+	<div class="content-product">
         <!-- 첫번째 줄 제품 -->
         <div class="product_list">
 
@@ -88,7 +100,11 @@
 				                        </div>
 				                        <div class="time">남은 시간: ${list.remainingTime }</div>
 				                    </div>
+				                    
 				                </a>
+				                	<div>
+										<button type="button" onclick="location.href='deleteInterest?auction_no=${list.auction_no}'">삭제</button>				                    
+				                    </div>
 				              
 				            	</div>
 							</c:forEach>
@@ -109,10 +125,10 @@
 			    	</li>
 					<c:forEach var="item" varStatus="status" begin="${ startPage }" end="${ endPage }" step="1">
                 		<c:if test="${ pageNum == item }">
-                    		<li><a href="productlist?pageNum=1&type=${auctionType }">${ item }</a></li>
+                    		<li><a href="mypage_interest.do?pageNum=1">${ item }</a></li>
                 		</c:if>
                 		<c:if test="${ pageNum != item }">
-		 					<li><a href="productlist?pageNum=${ item }&type=${auctionType}">${ item }</a></li>
+		 					<li><a href="mypage_interest.do?pageNum=${ item }">${ item }</a></li>
                 		</c:if>
             		</c:forEach>
             		<li>
@@ -124,9 +140,10 @@
 			</nav>         
   </div>
 </div>
+    
  				 
-</div>
-        </div>
+  </div>
+<!--         </div> -->
     </section>
 </body>
 </html>

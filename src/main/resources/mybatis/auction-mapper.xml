@@ -262,4 +262,9 @@
 		DELETE FROM AUCTION
 		WHERE AUCTION_NO=#{auction_no}
 	</delete>
+	
+	<delete id="deleteInterest" parameterType="int"  >
+		DELETE FROM INTERESTED_AUCTIONS
+		WHERE INTERESTED_AUCTION_NO=#{auction_no}
+	</delete>
 </mapper>

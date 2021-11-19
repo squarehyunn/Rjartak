@@ -49,4 +49,6 @@ public interface AuctionBiz {
 
 	//auction삭제
 	public int deleteAuctionBiz(int auction_no);
+	//관심물품삭제
+	public int deleteInterestBiz(int auction_no);
 }

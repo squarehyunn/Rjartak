@@ -53,7 +53,7 @@
                       <button onclick="location.href='mypage_sale.do?sale=ing'">진행중인 물품</button>
                             <button onclick="location.href='mypage_sale.do?sale=end'">판매종료 물품</button>
                             <button onclick="location.href='mypage_sale.do?sale=trading'">판매물품 거래 진행 중</button>
-                            <button onclick="location.href='mypage_sale.do?sale=failure'">구매거부/반품/미입금</button>
+                            <button onclick="location.href='mypage_sale.do?sale=failure'">판매종료/보류</button>
     
                     
                     </div>
@@ -95,7 +95,7 @@
                                   <td>${list.current_price}</td>
                                   <td>${list.endDateStr}</td>
                                   <td>${auctionlist[status.index].bidder_nickname}</td>
-                                  <td><button></button></td>
+                                  <td><button>입장</button></td>
                                   <td><button type="button" onclick="location.href='trade.do?auction_no=${list.auction_no }'">판매확정</button></td>
 
                                 </tr>

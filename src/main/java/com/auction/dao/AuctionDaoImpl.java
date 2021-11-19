@@ -225,6 +225,13 @@ public class AuctionDaoImpl implements AuctionDao {
 		return res;
 	}
 
+	@Override
+	public int deleteInterest(int auction_no) {
+		int res = sqlSession.delete(NAMESPACE+"deleteInterest",auction_no);
+		
+		return res;
+	}
+
 
 
 

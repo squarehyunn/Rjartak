@@ -67,8 +67,8 @@ function execPostCode() {
                 console.log(fullRoadAddr);
                 
                 
-                $("[name=addr1]").val(data.zonecode);
-                $("[name=addr2]").val(fullRoadAddr);
+                $("[id=addr1]").val(data.zonecode);
+                $("[id=addr2]").val(fullRoadAddr);
                 
                 /* document.getElementById('signUpUserPostNo').value = data.zonecode; //5자리 새우편번호 사용
                 document.getElementById('signUpUserCompanyAddress').value = fullRoadAddr;
@@ -157,11 +157,11 @@ function execPostCode() {
                                     <th>주소*</th>
                                     <td>
                                        <div class="form-group">                   
-											<input class="form-control" style="width: 40%; display: inline;" placeholder="우편번호"  id="addr1" type="text" readonly="readonly" >
+											<input class="form-control" style="width: 40%; display: inline;" placeholder="우편번호"  id="addr1" value="${dto.address_detail2 }" name="address_detail2" type="text" readonly="readonly" >
 											    <button type="button" class="btn btn-default" onclick="execPostCode();" name="" > 우편번호 찾기</button>                               
 											</div>
 											<div class="form-group">
-											    <input class="form-control" style="top: 5px;" placeholder="도로명 주소" name="address" id="addr2" type="text" value="${dto.address}" readonly="readonly" />
+											    <input class="form-control" style="top: 5px;" placeholder="도로명 주소" name="address" id="addr2" type="text" value="${dto.address} " readonly="readonly" />
 											</div>
 											<div class="form-group">
 											    <input class="form-control" placeholder="상세주소" name="address_detail" id="addr3" value="${dto.address_detail}" type="text"  />

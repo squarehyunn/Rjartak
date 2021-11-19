@@ -20,18 +20,20 @@
   		<result property="level_no" column="LEVEL_NO"></result>
   		<result property="status_no" column="STATUS_NO"></result>
   		<result property="rank_no" column="RANK_NO"></result>
+  		<result property="address_detail2" column="ADDRESS_DETAIL2"></result>
   		
   	</resultMap>
   
   	<select id="selectOne" parameterType="String" resultMap="memberOne">
- 		SELECT EMAIL,NICKNAME,PASSWORD,GENDER,NAME,BIRTH,CREATED_AT,UPDATED_AT,ADDRESS,ADDRESS_DETAIL,AMOUNT,TX_AMOUNT,LEVEL_NO,STATUS_NO,RANK_NO
+ 		SELECT EMAIL,NICKNAME,PASSWORD,GENDER,NAME,BIRTH,CREATED_AT,UPDATED_AT,ADDRESS,ADDRESS_DETAIL,AMOUNT,TX_AMOUNT,LEVEL_NO,STATUS_NO,RANK_NO,
+ 		ADDRESS_DETAIL2
  		FROM MEMBER
  		WHERE EMAIL = trim(#{email})
   	</select>
   	
   	<update id="update" parameterType="memberDto">
   		UPDATE MEMBER
-  		SET NICKNAME=#{nickname}, PASSWORD=#{password}, ADDRESS=#{address}, ADDRESS_DETAIL=#{address_detail}
+  		SET NICKNAME=#{nickname}, PASSWORD=#{password}, ADDRESS=#{address}, ADDRESS_DETAIL=#{address_detail} , ADDRESS_DETAIL2=#{address_detail2}
   		WHERE EMAIL=#{email}
   	</update>
   	

@@ -52,7 +52,7 @@
               <button onclick="location.href='mypage_sale.do?sale=ing'">진행중인 물품</button>
                             <button onclick="location.href='mypage_sale.do?sale=end'">판매종료 물품</button>
                             <button onclick="location.href='mypage_sale.do?sale=trading'">판매물품 거래 진행 중</button>
-                            <button onclick="location.href='mypage_sale.do?sale=failure'">구매거부/반품/미입금</button>
+                            <button onclick="location.href='mypage_sale.do?sale=failure'">판매종료/보류</button>
                 
 
     
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="content">
-                        <h4>판매 종류/보류목록</h4>
+                        <h4>판매 종료/보류목록</h4>
                             <c:choose>
 	                    	<c:when test="${empty productlist }">
 	                    		<table class="type11">

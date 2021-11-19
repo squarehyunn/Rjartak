@@ -189,18 +189,18 @@ public class AuctionController {
 //		}
 		if(selectOne!=null) {
 			model.addAttribute("msg","이미 등록되어 있습니다.");
-			model.addAttribute("url", "productAddForm.log?auction_no="+auction_no);
-			return "auctionAlert";
+			model.addAttribute("url", "productDetail?auction_no="+auction_no);
+			return "auctionAlert2";
 		}else {
 			int res = auctionbiz.insertInterested(dto);
 			if(res>0) {
 				model.addAttribute("msg","관심상품 등록하였습니다.");
-				model.addAttribute("url", "mypage.do");
-				return "auctionAlert";
+				model.addAttribute("url", "mypage_interest.do?pageNum=1");
+				return "auctionAlert2";
 			}else {
 				model.addAttribute("msg","관심상품 등록실패");
-				model.addAttribute("url", "mypage.do");
-				return "auctionAlert";
+				model.addAttribute("url", "mypage_interest.do?pageNum=1");
+				return "auctionAlert2";
 			}
 
 		}
@@ -255,7 +255,21 @@ public class AuctionController {
 			return "auctionAlert";
 		}
 	}
-
+	
+	@RequestMapping(value="/deleteInterest")
+	public String deleteInterest(int auction_no,Model model) {
+		
+		int res = auctionbiz.deleteInterestBiz(auction_no);
+		if(res>0) {
+			model.addAttribute("msg","관심물품이 삭제되었습니다.");
+			model.addAttribute("url", "mypage_interest.do?pageNum=1");
+			return "auctionAlert2";
+		}else {
+			model.addAttribute("msg","관심물품 삭제 실패하였습니다.");
+			model.addAttribute("url", "mypage_interest.do?pageNum=1");
+			return "auctionAlert2";
+		}
+	}
 
 
 

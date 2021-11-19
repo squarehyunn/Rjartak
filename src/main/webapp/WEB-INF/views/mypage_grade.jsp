@@ -47,11 +47,9 @@
                         
                             <img src="image/general.png">
                             <span>${dto.nickname }님의 회원등급은 ${rankDto.rank_name }입니다.</span>
-                            <div style="border-left: black solid 1px; height: 50px; padding-left: 50px;">
-                                <div>거래횟수 : 0회</div>
+                            <div style="border-left: black solid 1px; ; padding-left: 50px;">
                                 <div>거래총액 : ${dto.tx_amount }원</div>
 
-                       <h4>거래등급</h4>
                       
                     </div>
 

@@ -54,7 +54,7 @@
                              <button onclick="location.href='mypage_buy.do?money=ing'">입찰중인 물품</button>
                             <button onclick="location.href='mypage_buy.do?money=end'">경매종료 물품</button>
                             <button onclick="location.href='mypage_buy.do?money=trading'">구매 물품 거래 진행 중</button>
-                            <button onclick="location.href='mypage_buy.do?money=failure'">구매거부/반품/미입금</button>
+                            <button onclick="location.href='mypage_buy.do?money=failure'">구매종료/보류</button>
                 
 
     

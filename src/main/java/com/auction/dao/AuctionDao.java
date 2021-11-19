@@ -61,6 +61,10 @@ public interface AuctionDao {
 	//검색기능
 	public List<AuctionDto> searchfor(int pageNum, String search, int category);
 	
+	//관심물품삭제
+	public int deleteInterest(int auction_no);
+
+	
 	
 }
 	
